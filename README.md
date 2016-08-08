@@ -1,2 +1,11 @@
 # Js-Utility-Functions
-Few helper functions provided which we need during programming but often use external libraries for the same.
+
+A set of functions to to help in the development process without the need for including external javacript libraries.
+
+- Merge two arrays
+- Check if two objects are equal
+- Truncate a string
+- Remove an element from an array
+- Check if two arrays are equal
+- Search for a query parameter in the url
+- Load an external script

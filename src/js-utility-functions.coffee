@@ -3,6 +3,8 @@ Array.prototype.merge = (array)->
 	originalArr = @
 	array.forEach (value)->
 		originalArr.push value
+
+
 #check if two objects are equal#
 Object.prototype.isEqual = (obj)->
 	originalObj = @
@@ -13,17 +15,22 @@ Object.prototype.isEqual = (obj)->
 		if originalObj[key] isnt obj[key]
 			return false
 	return true
+
+
 #truncate a string#
 String.prototype.truncateChars = (len)->
 	originalStr = @
 	return originalStr.substr(0,len)
-#remove element from array#
+
+
+#remove an element from an array#
 Array.prototype.removeElement = (ele)->
 	originalArr = @
 	index = originalArr.indexOf(ele)
 	return originalArr.splice(index,1)
 
-#check if two arrays are euqal#
+
+#check if two arrays are equal#
 Array.prototype.isEqual = (array)->
 	originalArr = @
 	if originalArr.length isnt array.length
@@ -33,12 +40,10 @@ Array.prototype.isEqual = (array)->
 		if originalArr[index] isnt array[index]
 			return false
 	return true
-
 			
 
 #search for a query parameter in the url#
 window.location.searchQuery = (parameter)->
-
 	urlParams = window.location.search.split('?')[1].split('&')
 
 	queryParams = {}
@@ -52,8 +57,7 @@ window.location.searchQuery = (parameter)->
 	return false
 	
 		
-	
-
+#load an external script#
 @loadExternalFile = (type,file,callback=false)->
 	if type isnt 'js'
 		console.log 'unsupported format'
