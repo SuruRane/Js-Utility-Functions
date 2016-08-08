@@ -1,3 +1,11 @@
+###
+#
+# JS Utility Functions
+# Surekha Rane | surekharane90@gmail.com
+# v1.0
+#
+###
+
 # merge two arrays#
 Array.prototype.merge = (array)->
 	originalArr = @
