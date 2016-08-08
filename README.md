@@ -1,6 +1,6 @@
-# Js-Utility-Functions
+# JS Utility Functions
 
-A set of functions to to help in the development process without the need for including external javacript libraries.
+A set of functions to help in the development process without the need for including external javacript libraries.
 
 - Merge two arrays
 - Check if two objects are equal
