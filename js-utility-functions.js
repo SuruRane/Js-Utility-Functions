@@ -10,7 +10,6 @@
   Object.prototype.isEqual = function(obj) {
     var key, originalObj, value;
     originalObj = this;
-    console.log(this);
     if (Object.keys(originalObj).length !== Object.keys(obj).length) {
       return false;
     }
@@ -52,18 +51,20 @@
   };
 
   window.location.searchQuery = function(parameter) {
-    var queryParams, urlParams;
-    urlParams = window.location.search.split('?')[1].split('&');
-    queryParams = {};
-    $.each(urlParams, function(index, value) {
-      var equalToSplit;
-      equalToSplit = value.split('=');
-      queryParams[equalToSplit[0]] = equalToSplit[1];
-      if (Object.keys(queryParams).length > 0) {
-        return queryParams[parameter];
-      }
-    });
-    return false;
+    if window.location.search{
+      var queryParams, urlParams;
+      urlParams = window.location.search.split('?')[1].split('&');
+      queryParams = {};
+      $.each(urlParams, function(index, value) {
+        var equalToSplit;
+        equalToSplit = value.split('=');
+        queryParams[equalToSplit[0]] = equalToSplit[1];
+        if (Object.keys(queryParams).length > 0) {
+          return queryParams[parameter];
+        }
+      });
+      return false;
+    }
   };
 
   this.loadExternalFile = function(type, file, callback) {
